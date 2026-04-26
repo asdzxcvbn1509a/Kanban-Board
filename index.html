@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f172a" />
+    <title>Kanban Board</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1 class="main-title">Kanban Board</h1>
+      <p class="subtitle">Drag, drop, and organize your work</p>
+    </header>
+
+    <main class="drag-container">
+      <ul class="drag-list">
+        <li class="drag-column" data-column="backlog">
+          <div class="header">
+            <div class="header-info">
+              <span class="header-dot"></span>
+              <h2>Backlog</h2>
+              <span class="count" data-count="backlog">0</span>
+            </div>
+            <button
+              class="add-btn"
+              type="button"
+              aria-label="Add backlog task"
+              data-add="backlog"
+            >
+              +
+            </button>
+          </div>
+          <div class="custom-scroll">
+            <ul class="drag-item-list" id="backlog-list" data-list="backlog">
+              <li class="drag-item" draggable="true">
+                <span class="drag-item-text" contenteditable="true">Plan project roadmap</span>
+                <button class="delete-btn" type="button" aria-label="Delete task">×</button>
+              </li>
+              <li class="drag-item" draggable="true">
+                <span class="drag-item-text" contenteditable="true">Research competitors</span>
+                <button class="delete-btn" type="button" aria-label="Delete task">×</button>
+              </li>
+            </ul>
+            <p class="empty-state">Nothing here yet</p>
+          </div>
+        </li>
+
+        <li class="drag-column" data-column="progress">
+          <div class="header">
+            <div class="header-info">
+              <span class="header-dot"></span>
+              <h2>In Progress</h2>
+              <span class="count" data-count="progress">0</span>
+            </div>
+            <button
+              class="add-btn"
+              type="button"
+              aria-label="Add in-progress task"
+              data-add="progress"
+            >
+              +
+            </button>
+          </div>
+          <div class="custom-scroll">
+            <ul class="drag-item-list" id="progress-list" data-list="progress">
+              <li class="drag-item" draggable="true">
+                <span class="drag-item-text" contenteditable="true">Design landing page</span>
+                <button class="delete-btn" type="button" aria-label="Delete task">×</button>
+              </li>
+            </ul>
+            <p class="empty-state">Nothing here yet</p>
+          </div>
+        </li>
+
+        <li class="drag-column" data-column="complete">
+          <div class="header">
+            <div class="header-info">
+              <span class="header-dot"></span>
+              <h2>Complete</h2>
+              <span class="count" data-count="complete">0</span>
+            </div>
+            <button
+              class="add-btn"
+              type="button"
+              aria-label="Add completed task"
+              data-add="complete"
+            >
+              +
+            </button>
+          </div>
+          <div class="custom-scroll">
+            <ul class="drag-item-list" id="complete-list" data-list="complete"></ul>
+            <p class="empty-state">Nothing here yet</p>
+          </div>
+        </li>
+
+        <li class="drag-column" data-column="reject">
+          <div class="header">
+            <div class="header-info">
+              <span class="header-dot"></span>
+              <h2>Rejected</h2>
+              <span class="count" data-count="reject">0</span>
+            </div>
+            <button
+              class="add-btn"
+              type="button"
+              aria-label="Add rejected task"
+              data-add="reject"
+            >
+              +
+            </button>
+          </div>
+          <div class="custom-scroll">
+            <ul class="drag-item-list" id="reject-list" data-list="reject"></ul>
+            <p class="empty-state">Nothing here yet</p>
+          </div>
+        </li>
+      </ul>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
