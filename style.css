@@ -55,7 +55,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ---------- Header ---------- */
 
 .app-header {
   text-align: center;
@@ -80,7 +79,6 @@ body {
   font-weight: 400;
 }
 
-/* ---------- Layout ---------- */
 
 ul {
   list-style: none;
@@ -101,7 +99,6 @@ ul {
   align-items: flex-start;
 }
 
-/* ---------- Column ---------- */
 
 .drag-column {
   background: var(--column-bg);
@@ -177,7 +174,6 @@ ul {
 [data-column="complete"] { border-top: 3px solid var(--category_3); }
 [data-column="reject"] { border-top: 3px solid var(--category_4); }
 
-/* ---------- Add Button ---------- */
 
 .add-btn {
   width: 28px;
@@ -208,7 +204,6 @@ ul {
   transform: scale(0.95);
 }
 
-/* ---------- Scroll Area ---------- */
 
 .custom-scroll {
   overflow-y: auto;
@@ -256,7 +251,6 @@ ul {
   display: block;
 }
 
-/* ---------- Card ---------- */
 
 .drag-item {
   position: relative;
@@ -341,7 +335,6 @@ ul {
   outline: none;
 }
 
-/* ---------- Responsive ---------- */
 
 @media (max-width: 1024px) {
   .drag-list {
